@@ -1,4 +1,4 @@
-# Behat Environment Extension
+# Behat Environment Extension [![License](https://img.shields.io/packagist/l/Wohlie/behat-environment.svg)](https://packagist.org/packages/Wohlie/behat-environment)
 
 Allows to inject the current project environment into a context. The extension currently only supports the version
 number.
