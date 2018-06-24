@@ -1,0 +1,32 @@
+{
+  "name": "wohlie/behat-environment",
+  "type": "behat-extension",
+  "description": "Behat extension to provide environment specific information in a context classes.",
+  "keywords": [
+    "BDD",
+    "behat",
+    "environment"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Erik Wohllebe",
+      "email": "Erik.Wohllebe@googlemail.com"
+    }
+  ],
+  "require": {
+    "behat/behat": "^3.0",
+    "pascalc/php-properties": "^1.0"
+  },
+  "require-dev": {
+    "friends-of-behat/test-context": "^0.3"
+  },
+  "autoload": {
+    "psr-0": {
+      "Wohlie\\Behat\\Environment\\": "src/"
+    }
+  },
+  "scripts": {
+    "test": "behat --format=progress"
+  }
+}

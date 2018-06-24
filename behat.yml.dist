@@ -1,0 +1,8 @@
+default:
+  suites:
+    default:
+      contexts:
+      - FriendsOfBehat\TestContext\Context\TestContext
+  extensions:
+    Wohlie\Behat\Environment:
+      property_file: %paths.base%/features/version/fixtures/package.json
