@@ -80,7 +80,7 @@ Feature: Test that the version will be read properly out of the environment.
             - FeatureContext
         extensions:
           Wohlie\Behat\Environment:
-            property_file: %paths.base%/features/version/fixtures/package.json
+            property_file: '%paths.base%/features/version/fixtures/package.json'
             """
     Given a feature file containing:
             """
@@ -102,7 +102,7 @@ Feature: Test that the version will be read properly out of the environment.
             - FeatureContext
         extensions:
           Wohlie\Behat\Environment:
-            property_file: %paths.base%/features/version/fixtures/build.property
+            property_file: '%paths.base%/features/version/fixtures/build.property'
             """
     Given a feature file containing:
             """
@@ -130,7 +130,7 @@ Feature: Test that the version will be read properly out of the environment.
             - FeatureContext
         extensions:
           Wohlie\Behat\Environment:
-            property_file: %paths.base%/features/version/fixtures/package.json
+            property_file: '%paths.base%/features/version/fixtures/package.json'
             """
     Given a feature file containing:
             """
@@ -152,7 +152,7 @@ Feature: Test that the version will be read properly out of the environment.
             - FeatureContext
         extensions:
           Wohlie\Behat\Environment:
-            property_file: %paths.base%/features/version/fixtures/build-no-version.property
+            property_file: '%paths.base%/features/version/fixtures/build-no-version.property'
             """
     Given a feature file containing:
             """
@@ -195,7 +195,7 @@ Feature: Test that the version will be read properly out of the environment.
             - FeatureContext
         extensions:
           Wohlie\Behat\Environment:
-            property_file: %paths.base%/features/version/fixtures/not-existing.property
+            property_file: '%paths.base%/features/version/fixtures/not-existing.property'
             """
     Given a feature file containing:
             """

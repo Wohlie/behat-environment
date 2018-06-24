@@ -25,7 +25,7 @@ The project environment can be extracted from the following resources:
       # ...
       extensions:
         Wohlie\Behat\Environment:
-          property_file: %paths.base%/package.json
+          property_file: '%paths.base%/package.json'
     ```
     
 The parameter `property_file` is required.
