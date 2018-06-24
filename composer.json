@@ -3,9 +3,10 @@
   "type": "behat-extension",
   "description": "Behat extension to provide environment specific information in a context classes.",
   "keywords": [
-    "BDD",
     "behat",
-    "environment"
+    "behat-extension",
+    "behat-context",
+    "behat-contexts"
   ],
   "license": "MIT",
   "authors": [
