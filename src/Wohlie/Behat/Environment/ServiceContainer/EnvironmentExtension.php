@@ -19,9 +19,9 @@ use Symfony\Component\DependencyInjection\Reference;
 
 class EnvironmentExtension implements Extension
 {
-    const ID_ENV = 'ds_env';
-    const ID_ENV_VERSION_RESOLVER = 'ds_env.version_resolver';
-    const ID_ENV_CONTEXT_INITIALIZER = 'ds_env.context_initializer';
+    const ID_ENV = 'wohlie_env';
+    const ID_ENV_VERSION_RESOLVER = 'wohlie_env.version_resolver';
+    const ID_ENV_CONTEXT_INITIALIZER = 'wohlie_env.context_initializer';
 
     /**
      * Returns the extension config key.
@@ -30,7 +30,7 @@ class EnvironmentExtension implements Extension
      */
     public function getConfigKey()
     {
-        return 'ds_env';
+        return self::ID_ENV;
     }
 
     /**
