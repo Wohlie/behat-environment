@@ -6,6 +6,8 @@ number.
 The project environment can be extracted from the following resources:
   - `package.json`
     - The version will be extracted from the object key `version`
+  - `composer.json`
+    - The version will be extracted from the object key `version`
   - `*.property`
     - The version will be extracted from the key `artifact.version`
 
