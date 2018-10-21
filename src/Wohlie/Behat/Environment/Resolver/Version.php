@@ -45,7 +45,7 @@ class Version
         $version  = null;
         $filePath = $this->getFilePath();
 
-        if ($this->isPackageJson($filePath)) {
+        if ($this->isPackageJson($filePath) || $this->isComposerJson($filePath)) {
             $json = json_decode(file_get_contents($filePath), true);
             if (!empty($json['version'])) {
                 $version = $json['version'];
@@ -77,7 +77,11 @@ class Version
      */
     public function isValid($filePath)
     {
-        return $this->isFile($filePath) && ($this->isPropertyFile($filePath) || $this->isPackageJson($filePath));
+        return $this->isFile($filePath) && (
+                $this->isPropertyFile($filePath)
+                || $this->isPackageJson($filePath)
+                || $this->isComposerJson($filePath)
+            );
     }
 
     /**
@@ -100,6 +104,17 @@ class Version
     protected function isPackageJson($filePath)
     {
         return 'package.json' === strtolower(pathinfo($filePath, PATHINFO_BASENAME));
+    }
+
+    /**
+     * Return true if the given file is a composer json.
+     *
+     * @param string $filePath
+     * @return bool
+     */
+    protected function isComposerJson($filePath)
+    {
+        return 'composer.json' === strtolower(pathinfo($filePath, PATHINFO_BASENAME));
     }
 
     /**

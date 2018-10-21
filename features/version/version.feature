@@ -56,6 +56,12 @@ Feature: Test that the version will be read properly out of the environment.
         "version": "6.2.4"
       }
       """
+    Given a composer.json file "features/version/fixtures/composer.json" containing:
+      """
+      {
+        "version": "0.0.1"
+      }
+      """
     Given a build.property file "features/version/fixtures/build.property" containing:
       """
       # artifact properties
@@ -91,6 +97,28 @@ Feature: Test that the version will be read properly out of the environment.
       """
     When I run Behat
     Then it should pass with "6.2.4"
+
+  Scenario: It prints the right version from the composer.json.
+    Given a Behat configuration containing:
+      """
+      default:
+        suites:
+          default:
+            contexts:
+            - FeatureContext
+        extensions:
+          Wohlie\Behat\Environment:
+            property_file: '%paths.base%/features/version/fixtures/composer.json'
+            """
+    Given a feature file containing:
+            """
+      Feature: Passing feature
+
+        Scenario: Print the project version
+          Then it print the project version
+      """
+    When I run Behat
+    Then it should pass with "0.0.1"
 
   Scenario: It prints the right version from the build.property.
     Given a Behat configuration containing:
